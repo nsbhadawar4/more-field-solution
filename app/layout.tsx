@@ -1,12 +1,21 @@
 "use client";
+
 import "./modal.css";
 import "./globals.css";
 import Layout from "./components/layout";
 import ThemeRegistry from "./theme-registry";
 import { usePathname } from "next/navigation";
+import { Montserrat, Geist, Geist_Mono } from "next/font/google";
 
-import { Geist, Geist_Mono } from "next/font/google";
+// ✅ Load Montserrat from Google Fonts
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // add more if needed
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
+// Keep your existing Geist fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,21 +32,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  // const hideLayoutRoutes = [
-  //   "/",
-  //   "/auth/verification",
-  //   "/auth/verification/signin-step",
-  // ];
-  // const showHeader = !hideLayoutRoutes.includes(pathname);
 
   return (
-    <html lang="en">
-      <link rel="icon" href="/favicon.svg" />
-      <title>Find AT Work</title>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${montserrat.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.svg" />
+        <title>Find AT Work</title>
+      </head>
+      <body
+        className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable}`}
+      >
         <ThemeRegistry>
-          {/* {showHeader ? <Layout>{children}</Layout> : <>{children}</>} */}
-          <Layout>{children}</Layout> 
+          <Layout>{children}</Layout>
         </ThemeRegistry>
       </body>
     </html>
