@@ -34,7 +34,7 @@ const Contact = () => {
       <Box sx={{ py: 8 }}>
         {/* Header Section */}
         <Box textAlign="center" mb={6}>
-          <Typography variant="h1">Book Tractor Services</Typography>
+          <Typography variant="h1">Book at Tractor Services</Typography>
           <Typography variant="h6">
             Fill out the form below to book a service or ask for more
             information
