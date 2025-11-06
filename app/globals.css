@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pageColor {
+  background-color: #F7F7F7;
+  min-height: 90vh;
+  height: auto;
+  padding: 30px 20px;
+}
+
+/* CUSTOM SCROLLBAR START */
+.customScrollbar {
+  overflow-x: auto;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.customScrollbar::-webkit-scrollbar {
+  height: 8px;
+  background-color: transparent;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* CUSTOM SCROLLBAR EXIT */
+
+.customLabel {
+  color: #333333 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin-bottom: 10px;
+}
+
+.customTextArea,
+.customTextArea:focus {
+  border: 1px solid #D0D5DD;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: capitalize;
+  resize: none;
+}

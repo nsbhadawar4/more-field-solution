@@ -1,0 +1,34 @@
+.loginCoverImage {
+  height: 100%;
+  width: 100%;
+  background-color: #041C39;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.formBox {
+  background: #FFFFFF;
+  height: 100vh;
+  padding: 40px;
+  width: 540px;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  width: 80px;
+  height: 80px;
+}
+
+
+@media (max-width: 600px) {
+  .formBox {
+    background: #FFFFFF;
+    height: 100%;
+    padding: 40px;
+  }
+}
